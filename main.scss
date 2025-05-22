@@ -34,21 +34,27 @@ body {
   font-family: sans-serif;
   color: white;
 
-  &--item1 {
+  &--1 {
+    background-color: orangered;
   }
 
-  &--item2 {
+  &--2 {
+    background-color: yellowgreen;
   }
 
-  &--item3 {
+  &--3 {
+    background-color: blueviolet;
   }
 
-  &--item4 {
+  &--4 {
+    background-color: palevioletred;
   }
 
-  &--item5 {
+  &--5 {
+    background-color: royalblue;
   }
 
-  &--item6 {
+  &--6 {
+    background-color: goldenrod;
   }
 }
