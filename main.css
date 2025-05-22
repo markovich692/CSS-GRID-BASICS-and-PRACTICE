@@ -23,4 +23,5 @@ body {
   width: 1000px;
   margin: 30px auto;
   display: grid;
+  grid-template-rows: 150px 150px;
 }
