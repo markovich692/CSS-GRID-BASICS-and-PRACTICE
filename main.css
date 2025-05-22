@@ -17,3 +17,10 @@ html {
 body {
   width: 100%;
 }
+
+.container {
+  background-color: #eee;
+  width: 1000px;
+  margin: 30px auto;
+  display: grid;
+}
