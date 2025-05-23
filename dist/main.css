@@ -43,6 +43,7 @@ body {
 }
 .item--2 {
   background-color: yellowgreen;
+  grid-column: 2/-1;
 }
 .item--3 {
   background-color: blueviolet;
