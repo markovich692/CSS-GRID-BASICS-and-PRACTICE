@@ -26,8 +26,10 @@ body {
 
   grid-template-rows: repeat(2, 150px);
 
-  grid-template-columns: repeat(2, 150px) 1fr;
-  // color: #fff;
+  // grid-template-columns: repeat(2, 150px) 1fr;
+  grid-template-columns: repeat(3, 1fr);
+
+  color: #fff;
   grid-column-gap: 40px;
   grid-row-gap: 20px;
 }
