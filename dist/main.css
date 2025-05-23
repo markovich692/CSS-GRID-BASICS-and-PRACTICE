@@ -24,7 +24,7 @@ body {
   margin: 30px auto;
   display: grid;
   grid-template-rows: repeat(2, 150px);
-  grid-template-columns: 50% 2fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   color: #fff;
   grid-column-gap: 40px;
   grid-row-gap: 20px;
@@ -38,6 +38,10 @@ body {
 }
 .item--1 {
   background-color: orangered;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 2;
+  grid-column-end: 3;
 }
 .item--2 {
   background-color: yellowgreen;
