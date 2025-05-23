@@ -31,8 +31,9 @@ body {
   grid-template-columns: repeat(3, 1fr);
 
   color: #fff;
-  grid-column-gap: 40px;
-  grid-row-gap: 20px;
+  // grid-column-gap: 40px;
+  //   grid-row-gap: 20px;
+  grid-gap: 50px;
 }
 
 .item {
@@ -43,10 +44,13 @@ body {
 
   &--1 {
     background-color: orangered;
-    grid-row-start: 2;
-    grid-row-end: 3;
-    grid-column-start: 2;
-    grid-column-end: 3;
+    // grid-row-start: 2;
+    // grid-row-end: 3;
+    // grid-column-start: 2;
+    // grid-column-end: 3;
+
+    grid-row: 2/3;
+    grid-column: 2/3;
   }
 
   &--2 {
