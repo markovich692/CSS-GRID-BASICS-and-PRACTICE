@@ -67,6 +67,8 @@ body {
 
   &--5 {
     background-color: royalblue;
+    grid-row: 1/2;
+    grid-column: 3/4;
   }
 
   &--6 {
