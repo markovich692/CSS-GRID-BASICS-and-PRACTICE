@@ -7,3 +7,15 @@ because it uses the letters A-Z at least once (case is irrelevant).
 Given a string, detect whether or not it is a pangram.
 Return True if it is, False if not. Ignore numbers and punctuation.
 */
+
+function isPangram(string) {
+  let newArr = [];
+  const arrInput = string.split("");
+
+  arrInput.forEach((element, i, inputArr) => {
+    newArr.push(element);
+  });
+}
+
+// isPangram("The quick brown fox jumps over the lazy dog.");
+isPangram("The quick");
