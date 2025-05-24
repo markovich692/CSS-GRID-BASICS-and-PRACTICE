@@ -1,28 +1,8 @@
-/*
-A pangram is a sentence that contains every single letter 
-of the alphabet at least once. For example, the sentence 
-"The quick brown fox jumps over the lazy dog" is a pangram, 
-because it uses the letters A-Z at least once (case is irrelevant).
+const arrTest = [1, 2, 3, 4];
+console.log(arrTest.reverse());
 
-Given a string, detect whether or not it is a pangram.
-Return True if it is, False if not. Ignore numbers and punctuation.
-*/
-
-function isPangram(string) {
-  let newArr = [];
-  const arrLetters = string
-    .toLowerCase()
-    .replace(/[^a-z]/g, "")
-    .split("");
-
-  console.log(arrLetters);
-
-  arrLetters.forEach((letter) => {
-    newArr.join("").includes(letter) ? newArr : newArr.push(letter);
-  });
-
-  return newArr.length === 26 ? true : false;
+function descendingOrder(n) {
+  //...
 }
-const test = isPangram("abcdefghijklmopqrstuvwxyz");
 
-console.log(test);
+descendingOrder(12345);
