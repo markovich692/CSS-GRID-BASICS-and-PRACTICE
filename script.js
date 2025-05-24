@@ -10,20 +10,19 @@ Return True if it is, False if not. Ignore numbers and punctuation.
 
 function isPangram(string) {
   let newArr = [];
-  const arrLetters = string.split("");
-  let res;
+  const arrLetters = string
+    .toLowerCase()
+    .replace(/[^a-z]/g, "")
+    .split("");
 
-  //Loops over the letters of the string input
-  arrLetters.forEach((letter, i, arr) => {
-    newArr.push(letter);
+  console.log(arrLetters);
 
-    const newArrUpdated = arr.slice(i + 1);
-
-    console.log(newArrUpdated, arr, letter);
-
-    console.log(newArrUpdated.join("").includes(letter));
+  arrLetters.forEach((letter) => {
+    newArr.join("").includes(letter) ? newArr : newArr.push(letter);
   });
+
+  return newArr.length === 26 ? true : false;
 }
-// isPangram("The quick brown fox jumps over the lazy dog.");
-// const test = isPangram("The quick brown fox jumps over the lazy dog.");
-const test = isPangram("The quick");
+const test = isPangram("abcdefghijklmopqrstuvwxyz");
+
+console.log(test);
