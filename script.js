@@ -17,7 +17,9 @@ function validPhoneNumber(phoneNumber) {
 
   const splitNumber = phoneNumber.split("");
 
-  console.log(splitNumber);
+  const areaCodeCheck = [...splitNumber].splice(1, 3).join("");
+
+  // const formatCheck
 }
 
 validPhoneNumber("(123) 456-7890");
