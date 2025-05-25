@@ -10,12 +10,17 @@ function validatePIN(pin) {
   //return true or false
 
   const digitCheck = pin
-    .trim()
     .split("")
-    .every((dig) => isFinite(parseFloat(dig)));
-  const checkSize = pin.length === 4 || pin.length === 6;
+    .map((digit) => {
+      return isNaN(parseFloat(digit));
+    })
+    .some((bool) => bool === true)
+    ? false
+    : true;
+
+  const checkSize = pin.trim().length === 4 || pin.trim().length === 6;
   return digitCheck && checkSize;
 }
 
-const test = validatePIN("123");
+const test = validatePIN("12350 ");
 console.log(test);
