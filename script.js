@@ -12,14 +12,27 @@ Only worry about the following format:
 
 function validPhoneNumber(phoneNumber) {
   //TODO: Return whether phoneNumber is in the proper form
-  console.log(phoneNumber.length);
-  if (phoneNumber.length !== 14) return;
+
+  if (phoneNumber.length !== 14) return false;
 
   const splitNumber = phoneNumber.split("");
 
-  const areaCodeCheck = [...splitNumber].splice(1, 3).join("");
+  const digitCheck =
+    [...splitNumber].slice(1, 4).join("") +
+    [...splitNumber].slice(6, 9).join("") +
+    [...splitNumber].slice(10).join("");
 
-  // const formatCheck
+  console.log(isNaN(digitCheck));
+
+  const punctuationCheck =
+    [...phoneNumber][0] === "(" &&
+    [...phoneNumber][4] === ")" &&
+    [...phoneNumber][5] === " " &&
+    [...phoneNumber][9] === "-";
+
+  return punctuationCheck && !isNaN(digitCheck) ? true : false;
 }
 
-validPhoneNumber("(123) 456-7890");
+const test = validPhoneNumber("(176)476-7890");
+
+console.log(test);
