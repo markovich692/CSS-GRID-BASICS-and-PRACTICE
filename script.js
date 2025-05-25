@@ -1,38 +1,7 @@
 /*
 Description:
-Write a function that accepts a string, and returns 
-true if it is in the form of a phone number.
-Assume that any integer from 0-9 in any of 
-the spots will produce a valid phone number.
+ATM machines allow 4 or 6 digit PIN codes and PIN codes 
+cannot contain anything but exactly 4 digits or exactly 6 digits.
 
-Only worry about the following format:
-(123) 456-7890 (don't forget the space
-   after the close parentheses)
+If the function is passed a valid PIN string, return true, else return false.
 */
-
-function validPhoneNumber(phoneNumber) {
-  //TODO: Return whether phoneNumber is in the proper form
-
-  if (phoneNumber.length !== 14) return false;
-
-  const splitNumber = phoneNumber.split("");
-
-  const digitCheck =
-    [...splitNumber].slice(1, 4).join("") +
-    [...splitNumber].slice(6, 9).join("") +
-    [...splitNumber].slice(10).join("");
-
-  console.log(isNaN(digitCheck));
-
-  const punctuationCheck =
-    [...phoneNumber][0] === "(" &&
-    [...phoneNumber][4] === ")" &&
-    [...phoneNumber][5] === " " &&
-    [...phoneNumber][9] === "-";
-
-  return punctuationCheck && !isNaN(digitCheck) ? true : false;
-}
-
-const test = validPhoneNumber("(176)476-7890");
-
-console.log(test);
