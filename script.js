@@ -9,3 +9,11 @@ Only worry about the following format:
 (123) 456-7890 (don't forget the space
    after the close parentheses)
 */
+
+function validPhoneNumber(phoneNumber) {
+  //TODO: Return whether phoneNumber is in the proper form
+  console.log(phoneNumber.length);
+  if (phoneNumber.length !== 14) return;
+}
+
+validPhoneNumber("(123) 456-7890");
