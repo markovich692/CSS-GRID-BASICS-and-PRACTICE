@@ -14,6 +14,10 @@ function validPhoneNumber(phoneNumber) {
   //TODO: Return whether phoneNumber is in the proper form
   console.log(phoneNumber.length);
   if (phoneNumber.length !== 14) return;
+
+  const splitNumber = phoneNumber.split("");
+
+  console.log(splitNumber);
 }
 
 validPhoneNumber("(123) 456-7890");
