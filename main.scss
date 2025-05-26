@@ -146,8 +146,7 @@ body {
 }
 */
 
-// METHOD 2: Naming GRID ITEMS
-
+// METHOD 2: NAMING GRID ITEMS
 .challenge {
   width: 1000px;
   margin: 30px auto;
@@ -198,5 +197,62 @@ body {
   &__footer {
     background-color: orangered;
     grid-column: col-start 1 / grid-end;
+  }
+}
+
+//METHOD 3:
+
+.challenge {
+  width: 1000px;
+  margin: 30px auto;
+
+  display: grid;
+  grid-template-rows: 1fr 2fr 3fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
+}
+
+.item {
+  padding: 20px;
+  font-size: 30px;
+  font-family: sans-serif;
+  color: white;
+  display: grid;
+
+  &__header {
+    background-color: orangered;
+    grid-column: 1/2;
+    grid-column: 1/-1;
+  }
+
+  &--small-box-1 {
+    background-color: orangered;
+    grid-row: 2/3;
+    grid-column: 1/2;
+  }
+
+  &--small-box-2 {
+    background-color: orangered;
+    grid-row: 2/3;
+  }
+
+  &--small-box-3 {
+    background-color: orangered;
+    grid-row: 2/3;
+  }
+
+  &__sidebar {
+    background-color: orangered;
+    grid-row: 2/4;
+  }
+
+  &__main-content {
+    background-color: orangered;
+    grid-column: 1/4;
+  }
+
+  &__footer {
+    background-color: orangered;
+    grid-column: 1/-1;
   }
 }

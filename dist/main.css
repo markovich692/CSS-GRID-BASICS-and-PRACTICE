@@ -189,4 +189,51 @@ body {
   grid-column: col-start 1/grid-end;
 }
 
+.challenge {
+  width: 1000px;
+  margin: 30px auto;
+  display: grid;
+  grid-template-rows: 1fr 2fr 3fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
+}
+
+.item {
+  padding: 20px;
+  font-size: 30px;
+  font-family: sans-serif;
+  color: white;
+  display: grid;
+}
+.item__header {
+  background-color: orangered;
+  grid-column: 1/2;
+  grid-column: 1/-1;
+}
+.item--small-box-1 {
+  background-color: orangered;
+  grid-row: 2/3;
+  grid-column: 1/2;
+}
+.item--small-box-2 {
+  background-color: orangered;
+  grid-row: 2/3;
+}
+.item--small-box-3 {
+  background-color: orangered;
+  grid-row: 2/3;
+}
+.item__sidebar {
+  background-color: orangered;
+  grid-row: 2/4;
+}
+.item__main-content {
+  background-color: orangered;
+  grid-column: 1/4;
+}
+.item__footer {
+  background-color: orangered;
+  grid-column: 1/-1;
+}
+
 /*# sourceMappingURL=main.css.map */
