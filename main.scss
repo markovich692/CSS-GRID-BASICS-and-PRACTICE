@@ -200,7 +200,7 @@ body {
   }
 }
 
-//METHOD 3:
+//METHOD 3: NAMING GRID AREAS
 
 .challenge {
   width: 1000px;
@@ -209,6 +209,11 @@ body {
   display: grid;
   grid-template-rows: 1fr 2fr 3fr 1fr;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "head head head head"
+    "box box box side"
+    "main main main side"
+    "foot foot foot foot";
   grid-gap: 10px;
 }
 
