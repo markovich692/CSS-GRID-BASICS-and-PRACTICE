@@ -193,7 +193,7 @@ body {
   width: 1000px;
   margin: 30px auto;
   display: grid;
-  grid-template-areas: "head head head head" "box box box side" "main main main side" "foot foot foot foot";
+  grid-template-areas: ". head head ." "box-1 box-2 box-3 side" "main main main side" "foot foot foot foot";
   grid-gap: 10px;
 }
 
@@ -210,12 +210,15 @@ body {
 }
 .item--small-box-1 {
   background-color: orangered;
+  grid-area: box-1;
 }
 .item--small-box-2 {
   background-color: orangered;
+  grid-area: box-2;
 }
 .item--small-box-3 {
   background-color: orangered;
+  grid-area: box-3;
 }
 .item__sidebar {
   background-color: orangered;
