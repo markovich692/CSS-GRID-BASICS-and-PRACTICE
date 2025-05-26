@@ -149,7 +149,7 @@ body {
   margin: 30px auto;
   display: grid;
   grid-template-rows: [header-start] 1fr [header-end box-start] 2fr [box-end main-start] 3fr [main-end footer-start] 1fr [footer-end];
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, [col-start] 1fr [col-end]) 200px [grid-end];
   grid-gap: 10px;
 }
 
@@ -158,11 +158,10 @@ body {
   font-size: 30px;
   font-family: sans-serif;
   color: white;
-  display: grid;
 }
 .item__header {
   background-color: orangered;
-  grid-column: 1/-1;
+  grid-column: col-start 1/grid-end;
 }
 .item--small-box-1 {
   background-color: orangered;
@@ -183,10 +182,11 @@ body {
 .item__main-content {
   background-color: orangered;
   grid-column: 1/4;
+  grid-column: col-start 1/col-end 3;
 }
 .item__footer {
   background-color: orangered;
-  grid-column: 1/-1;
+  grid-column: col-start 1/grid-end;
 }
 
 /*# sourceMappingURL=main.css.map */
