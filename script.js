@@ -21,6 +21,7 @@ What if the string is empty? Then the result should be empty object literal, {}.
 //   return {};
 // }
 
+/*
 const test1 = function (s) {
   if (!s.length) return {};
   return s.split("").reduce((acc, el, i, arr) => {
@@ -32,3 +33,4 @@ const test1 = function (s) {
 
 const test = test1("ababbah");
 console.log(test);
+*/
