@@ -257,36 +257,67 @@ body {
   }
 }
 */
+/*
+//IMPLICIT GRIDS vs. EXPLICIT GRIDS
+
 .container {
   width: 1000px;
   margin: 30px auto;
   background-color: #ddd;
   display: grid;
+  // grid-template-rows: repeat(2, 150px);
+  // grid-template-columns: repeat(2, 1fr);
   grid-gap: 30px;
-  grid-auto-flow: row;
+  // grid-auto-rows: 80px;
+
+  grid-auto-flow: row dense;
+
   grid-auto-columns: 0.5fr;
+
+  // align-items: center;
+  // justify-items: center;
+
+  //ALIGN GRID TRACKS
   height: 1000px;
   grid-template-rows: repeat(2, 100px);
   grid-template-columns: repeat(2, 150px);
   justify-content: center;
   align-content: center;
+
+  .item {
+    padding: 20px;
+    font-size: 30px;
+    font-family: sans-serif;
+    color: white;
+    background-color: orangered;
+
+    &--4 {
+      background-color: crimson;
+      grid-row: 2 / span 3;
+      align-self: start;
+      justify-self: start;
+    }
+
+    &--7 {
+      background-color: palevioletred;
+      grid-column: 1/-1;
+    }
+
+
+  }
+}
+*/
+.container {
+  width: 1000px;
+  margin: 30px auto;
+  background-color: #ddd;
 }
 .container .item {
-  padding: 20px;
-  font-size: 30px;
-  font-family: sans-serif;
+  padding: 10px;
   color: white;
+  font-family: sans-serif;
+  font-size: 30px;
   background-color: orangered;
-}
-.container .item--4 {
-  background-color: crimson;
-  grid-row: 2/span 3;
-  align-self: start;
-  justify-self: start;
-}
-.container .item--7 {
-  background-color: palevioletred;
-  grid-column: 1/-1;
 }
 
 /*# sourceMappingURL=main.css.map */
