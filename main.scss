@@ -314,12 +314,12 @@ body {
   width: 1000px;
   margin: 30px auto;
   background-color: #ddd;
-
+  height: 1000px;
+  display: grid;
   .item {
     padding: 10px;
     color: white;
     font-family: sans-serif;
     font-size: 30px;
-    background-color: orangered;
   }
 }
