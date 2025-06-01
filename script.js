@@ -54,4 +54,40 @@ will always be given an array with five six-sided dice values.
  For example, a given "5" can only count as part of 
  a triplet (contributing to the 500 points) or as 
  a single 50 points, but not both in the same roll.
+
+Throw       Score
+ ---------   ------------------
+ 5 1 3 4 1   250:  50 (for the 5) + 2 * 100 (for the 1s)
+ 1 1 1 3 1   1100: 1000 (for three 1s) + 100 (for the other 1)
+ 2 4 4 5 4   450:  400 (for three 4s) + 50 (for the 5)
  */
+
+function score(dice) {
+  // Fill me in!
+  let scoreArr = [];
+  let scoreObj = {
+    one: 0,
+    two: 0,
+    three: 0,
+    four: 0,
+    five: 0,
+    six: 0,
+  };
+
+  dice.forEach((num, i, arr) => {
+    if (num === 1) scoreObj.one += 1;
+    if (num === 2) scoreObj.two += 1;
+    if (num === 3) scoreObj.three += 1;
+    if (num === 4) scoreObj.four += 1;
+    if (num === 5) scoreObj.five += 1;
+    if (num === 6) scoreObj.six += 1;
+  });
+
+  const scoreObjCopy = { ...scoreObj };
+
+  console.log(scoreObjCopy);
+
+  Array.from(Object.entries(scoreObjCopy), (entry) => console.log(entry));
+}
+
+score([2, 4, 5, 5, 5, 6]);
