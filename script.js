@@ -108,7 +108,7 @@ For example, given the following input array:
 
 
 
-*/
+
 
 function getFirstPython(list) {
   // Thank you for checking out my kata :)
@@ -150,3 +150,4 @@ let list1 = [
 ];
 
 console.log(getFirstPython(list1));
+*/
