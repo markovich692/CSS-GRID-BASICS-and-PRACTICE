@@ -176,6 +176,10 @@ function findUniq(arr) {
 
       result.push(check);
     }
+
+    const indexUniq = result.findIndex((res) => res === false);
+
+    console.log(arr[indexUniq + 1]);
   });
 }
 
