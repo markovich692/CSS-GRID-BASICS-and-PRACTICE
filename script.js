@@ -166,21 +166,12 @@ This is the first kata in series:
 
 function findUniq(arr) {
   // do magic
-  let check;
-  let result = [];
-  if (arr.length < 3) return;
 
-  arr.forEach((el, i, arrNum) => {
-    if (i + 1 <= arrNum.length - 1) {
-      check = el === arrNum[i + 1] ? true : false;
+  const [a, b, c] = arr;
 
-      result.push(check);
-    }
+  const similar = a === b ? a : a === c ? a : b;
 
-    const indexUniq = result.findIndex((res) => res === false);
-
-    console.log(arr[indexUniq + 1]);
-  });
+  return arr.find((el) => el !== similar);
 }
 
-findUniq([2, 2, 2, 4, 2]);
+console.log(findUniq([0, 0, 0, 0, 6]));
