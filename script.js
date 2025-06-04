@@ -152,7 +152,6 @@ let list1 = [
 console.log(getFirstPython(list1));
 */
 
-
 /*
 There is an array with some numbers. All numbers are equal except
 for one. Try to find it!
@@ -163,6 +162,21 @@ It’s guaranteed that array contains at least 3 numbers.
 The tests contain some very huge arrays, so think about performance.
 
 This is the first kata in series:
-/*
+*/
 
+function findUniq(arr) {
+  // do magic
+  let check;
+  let result = [];
+  if (arr.length < 3) return;
 
+  arr.forEach((el, i, arrNum) => {
+    if (i + 1 <= arrNum.length - 1) {
+      check = el === arrNum[i + 1] ? true : false;
+
+      result.push(check);
+    }
+  });
+}
+
+findUniq([2, 2, 2, 4, 2]);
