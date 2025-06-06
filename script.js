@@ -197,10 +197,9 @@ function arrayDiff(a, b) {
   if (!b.length) return a;
 
   a.forEach((num) => {
-    for (let j = 0; j < b.length; j++) {
-      num === b[j] && !arr.includes(b[j]) ? arr.push(num) : arr;
-    }
+    b.includes(num) ? arr : arr.push(num);
   });
+  return arr;
 }
 
-arrayDiff([1, 2, 2, 4, 5, 6], [1, 2, 2, 2, 3, 6, 5]);
+arrayDiff([1, 2, 3], [1, 2]);
