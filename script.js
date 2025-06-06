@@ -191,4 +191,10 @@ If a = [1, 2] and b = [1], the result should be [2].
 If a = [1, 2, 2, 2, 3] and b = [2], the result should be [1, 3].
 */
 
-function arrayDiff(a, b) {}
+function arrayDiff(a, b) {
+  let arr = [];
+
+  if (!b.length) return a;
+}
+
+arrayDiff([1, 2, 2, 4, 5, 6], [1, 2, 2, 2, 3, 6, 5]);
