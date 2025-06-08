@@ -230,9 +230,7 @@ Note:
 
 The ball can only be seen if the height of the rebounding ball 
 is strictly greater than the window parameter.
-*/
 
-// console.log(1.98 * 0.66);
 
 function bouncingBall(h, bounce, window) {
   // your code here
@@ -249,3 +247,10 @@ function bouncingBall(h, bounce, window) {
 }
 
 bouncingBall(3.0, 0.66, 1.5);
+*/
+
+/*
+The cockroach is one of the fastest insects. Write a function which 
+takes its speed in km per hour and returns it in cm per second, rounded
+down to the integer (= floored).
+*/
