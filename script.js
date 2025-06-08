@@ -231,3 +231,18 @@ Note:
 The ball can only be seen if the height of the rebounding ball 
 is strictly greater than the window parameter.
 */
+
+// console.log(1.98 * 0.66);
+
+function bouncingBall(h, bounce, window) {
+  // your code here
+  let pass;
+
+  if (h < 0) return;
+
+  if (h > window) pass = 1;
+
+  console.log(pass);
+}
+
+bouncingBall(12, 0, 1.5);
