@@ -236,22 +236,16 @@ is strictly greater than the window parameter.
 
 function bouncingBall(h, bounce, window) {
   // your code here
-
+  let pass = -1;
   //Initial condition
-  if (h < 0 || bounce < 0 || bounce > 1 || window > h) return;
 
-  let pass = h > window && !pass ? 1 : pass + 2;
+  while (h > 0 && bounce > 0 && bounce < 1 && h > window) {
+    pass = pass === -1 ? 1 : pass + 2;
+
+    h = bounce * h;
+  }
+
+  return pass;
 }
 
-bouncingBall(12, 0.66, 1.5);
-
-//  let pass = 0;
-
-//   if (h < 0) return;
-
-//   while (h > window) {
-//     pass = pass === 0 ? pass + 1 : pass + 2;
-
-//     h = h * bounce;
-
-//   }
+bouncingBall(3.0, 0.66, 1.5);
