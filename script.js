@@ -303,6 +303,9 @@ the input!
 */
 
 function duplicateEncode(word) {
-  // ...
-  return "";
+  const wordSplit = [...word.toLowerCase()];
+
+  console.log(wordSplit);
 }
+
+duplicateEncode("Success");
