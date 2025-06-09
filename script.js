@@ -303,9 +303,24 @@ the input!
 */
 
 function duplicateEncode(word) {
-  const wordSplit = [...word.toLowerCase()];
+  let translation = word.toLowerCase();
+  let strArr = [...translation];
 
-  console.log(wordSplit);
+  const charObject = strArr.reduce((acc, letter) => {
+    acc[letter] = acc[letter] ? acc[letter] + 1 : 1;
+    return acc;
+  }, {});
+
+  for (el of Object.entries(charObject)) {
+    const [key, value] = el;
+
+    translation =
+      value > 1
+        ? translation.toLowerCase().replaceAll(key, ")")
+        : translation.toLowerCase().replaceAll(key, "(");
+  }
+
+  return translation;
 }
 
 duplicateEncode("Success");
