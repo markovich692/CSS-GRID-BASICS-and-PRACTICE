@@ -352,3 +352,19 @@ to keep this a beginner exercise you don't need to check
  if the greeting is a subset of word (Hallowen can pass the test)
 function should be case insensitive to pass the tests
 */
+
+function validateHello(greetings) {
+  const arrGreatings = [
+    "hello",
+    "ciao",
+    "salut",
+    "hallo",
+    "hola",
+    "ahoj",
+    "czesc",
+  ];
+
+  return arrGreatings.some((greet) => greetings.toLowerCase().includes(greet));
+}
+
+validateHello("hello");
