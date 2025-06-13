@@ -351,7 +351,7 @@ you can assume the input is a string.
 to keep this a beginner exercise you don't need to check
  if the greeting is a subset of word (Hallowen can pass the test)
 function should be case insensitive to pass the tests
-*/
+
 
 function validateHello(greetings) {
   const arrGreatings = [
@@ -368,3 +368,16 @@ function validateHello(greetings) {
 }
 
 validateHello("hello");
+*/
+
+/*
+Triangular numbers are so called because of the equilateral triangular
+ shape that they occupy when laid out as dots. i.e.
+ You need to return the nth triangular number. You should return 0 for out of range values:
+
+For example: (Input --> Output)
+0 --> 0
+2 --> 3
+3 --> 6
+-10 --> 0
+*/
