@@ -381,3 +381,10 @@ For example: (Input --> Output)
 3 --> 6
 -10 --> 0
 */
+
+// Return the nth triangular number
+function triangular(n) {
+  if (n < 0) return 0;
+}
+
+triangular(3);
