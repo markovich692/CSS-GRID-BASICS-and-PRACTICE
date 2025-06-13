@@ -384,10 +384,12 @@ For example: (Input --> Output)
 
 // Return the nth triangular number
 function triangular(n) {
+  let res = 0;
   if (n < 0) return 0;
   for (n; 0 < n; --n) {
-    console.log(n);
+    res = res + n;
   }
+  return res;
 }
 
 triangular(3);
