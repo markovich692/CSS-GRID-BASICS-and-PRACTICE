@@ -384,12 +384,7 @@ For example: (Input --> Output)
 
 // Return the nth triangular number
 function triangular(n) {
-  let res = 0;
-  if (n < 0) return 0;
-  for (n; 0 < n; --n) {
-    res = res + n;
-  }
-  return res;
+  return n < 0 ? 0 : (n * (n + 1)) / 2;
 }
 
 triangular(3);
